@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-even',
@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './even.component.css'
 })
 export class EvenComponent {
+number: number = 0
+@Input()
+numbers: number = 0;
 
+handleEvent(event: number) {
+  this.number = event
+}
 }
